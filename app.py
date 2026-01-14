@@ -6,7 +6,7 @@ import os
 # KONFIGURASI HALAMAN
 # =========================
 st.set_page_config(
-    page_title="🎀 Happy Birthday 🎀",
+    page_title="🎀 Happy Birthday Sayang 🎀",
     page_icon="🎂",
     layout="centered"
 )
@@ -48,7 +48,7 @@ p {
 # =========================
 # JUDUL
 # =========================
-st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANG ✨🎀")
+st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANGG ✨🎀")
 st.markdown("## 💖 Pink Birthday Surprise 💖")
 
 # =========================
