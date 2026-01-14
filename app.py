@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import os
+st.write(os.listdir())
 
 # =========================
 # KONFIGURASI HALAMAN
@@ -50,7 +51,7 @@ st.markdown("## 💖 Pink Interactive Birthday Page 💖")
 # =========================
 # MUSIK
 # =========================
-music_path = "music/birthday.mp3"
+music_path = "birthday.mp3"
 if os.path.exists(music_path):
     with open(music_path, "rb") as audio:
         st.audio(audio.read(), format="audio/mp3", loop=True)
