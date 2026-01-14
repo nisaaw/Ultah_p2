@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import os
 
 # =========================
 # KONFIGURASI HALAMAN
@@ -47,53 +48,56 @@ p {
 # =========================
 # JUDUL
 # =========================
-st.markdown("## 🎀✨ BESOK ULANG TAHUN NIH ✨🎀")
-st.markdown("### 💖 Special Pink Birthday Page 💖")
+st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANG ✨🎀")
+st.markdown("## 💖 Pink Birthday Surprise 💖")
 
 # =========================
 # MUSIK
 # =========================
-st.markdown("🎵 **Putar musik dulu biar makin vibes~** 🎵")
-audio_file = open("music/birthday.mp3", "rb")
-audio_bytes = audio_file.read()
-st.audio(audio_bytes, format="audio/mp3", loop=True)
+st.markdown("### 🎵 Musik Ulang Tahun 🎵")
+
+music_path = "music/birthday.mp3"
+
+if os.path.exists(music_path):
+    with open(music_path, "rb") as audio_file:
+        audio_bytes = audio_file.read()
+        st.audio(audio_bytes, format="audio/mp3", loop=True)
+else:
+    st.warning("🎵 File musik belum ditemukan. Pastikan ada di folder music!")
 
 # =========================
-# PESAN ANIMASI
+# TOMBOL KEJUTAN
 # =========================
-if st.button("🎂 Klik untuk kejutan 🎂"):
-    with st.spinner("Menyiapkan kejutan imut... 🧸🎀"):
+if st.button("🎂 Klik untuk Kejutan Imut 🎂"):
+    with st.spinner("Menyiapkan kejutan pink... 🎀"):
         time.sleep(2)
 
     st.balloons()
 
+    st.markdown("## 🎉 HAPPY BIRTHDAY 🎉")
     st.markdown("""
-    ## 🎉 HAPPY BIRTHDAY 🎉  
-    💗💗💗
-    """)
+    💕💗💖
 
-    st.markdown("""
     🌸 Semoga di umur yang baru ini 🌸  
-
-    ✨ kamu selalu dikelilingi hal-hal baik  
-    ✨ langkahmu dimudahkan  
+    ✨ langkahmu selalu dimudahkan  
     ✨ hatimu selalu tenang  
+    ✨ rezekimu dilancarkan  
     ✨ dan senyummu nggak pernah hilang  
 
-    🎀 Jangan lupa…  
+    🎀 Ingat ya…  
     kamu itu **berharga**,  
     **cukup**,  
-    dan **pantas bahagia** 💕
+    dan **pantas bahagia** 💗  
 
     🎂💐✨
     """)
 
-    st.markdown("### 💕 Have a lovely birthday & a sweeter life 💕")
+    st.markdown("### 💖 Semoga harimu semanis warna pink 💖")
 
 # =========================
 # FOOTER
 # =========================
 st.markdown("""
 <br><br>
-<p>Made with 💖 | Pink Birthday App 🎀</p>
+<p>Made with 💕 | Pink Birthday App 🎀</p>
 """, unsafe_allow_html=True)
