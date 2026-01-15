@@ -1,7 +1,6 @@
 import streamlit as st
 import time
 import os
-st.write(os.listdir())
 
 # =========================
 # KONFIGURASI HALAMAN
@@ -129,13 +128,12 @@ tapi selalu ditunggu.
             st.success("🎉 BENAR! 🎉")
             st.balloons()
             st.markdown("""
-💖 Karena hari ini adalah tentangmu 💖  
+💖 you shine like a star 💖  
 
 Terima kasih sudah bertahan sejauh ini,  
 sudah belajar, tumbuh, dan menjadi versi dirimu yang sekarang.  
 
-🎂 Selamat ulang tahun 🎂  
-Semoga bahagiamu selalu lebih besar dari sedihmu ✨
+🎂 Selamat ulang tahun 🎂✨
 """)
         else:
             st.warning("🤏 Hampir benar, coba pikirkan lagi ya sayang~")
