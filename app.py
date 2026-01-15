@@ -42,7 +42,7 @@ p { color: #ff6699; font-size: 18px; text-align: center; }
 # JUDUL
 # =========================
 st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANG ✨🎀")
-st.markdown("## 💖 Spesial For You 💖")
+st.markdown("## 💖 Spesial pake karet 2 💖")
 
 # =========================
 # MUSIK
