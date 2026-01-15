@@ -159,7 +159,7 @@ Aku selalu datang setahun sekali,
 aku tidak bisa dihindari,  
 tapi selalu ditunggu.  
 
-❓ **Siapakah aku?**
+st.markdown("❓ Siapakah aku ❓")
 """)
 
     jawaban = st.text_input("Jawaban kamu:")
