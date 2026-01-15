@@ -102,7 +102,7 @@ if st.session_state.step == 2:
     st.markdown("Klik tombol di bawah ya 👇")
 
     if st.button("✨ Klik aku ✨"):
-        st.markdown("💗 💗 💗 💗 💗 💗 💗")
+        st.balloons()
         st.markdown("✨ 🎀 💕 🎂 💕 🎀 ✨")
         st.success("💖 ke ciamis bareng mamat selamat hari kamis buat kamu yang paling manis 💖")
 
