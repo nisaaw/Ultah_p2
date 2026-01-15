@@ -45,8 +45,8 @@ p {
 # =========================
 # JUDUL
 # =========================
-st.markdown("# 🎀✨ BESOK ULANG TAHUN NIH ✨🎀")
-st.markdown("## 💖 Pink Interactive Birthday Page 💖")
+st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANG ✨🎀")
+st.markdown("## 💖 Spesial For You 💖")
 
 # =========================
 # MUSIK
@@ -78,23 +78,17 @@ if st.session_state.step == 1:
     st.balloons()
 
     st.markdown("""
-🌸 **Selamat bertambah usia** 🌸  
+🌸 **Selamat ulang tahun yaaa** 🌸  
 
-Hari ini bukan cuma tentang bertambahnya angka,  
-tapi tentang semua proses yang sudah kamu lewati.  
+Happy birthday to a superstar ✨
 
-Tentang lelah yang kamu simpan sendiri,  
-tentang kuat yang kadang kamu ragukan,  
-dan tentang senyum yang tetap kamu usahakan.  
+Today is your day! your happiest day ever, today you're one year older.
+may happiness bloom in your heart all year long, may ur every wish come true.
+Thank you for always being my source of happiness, thank you for your hard work.
+i hope your special day will surrounded by happines, blessed with love, brightened with fun.
+I'll always by your side. I wish the best for you, be better and just be yourself!
 
-✨ Semoga di umur baru ini:
-- hatimu lebih tenang  
-- langkahmu lebih yakin  
-- mimpimu perlahan jadi nyata  
-- dan kamu selalu dikelilingi orang baik  
-
-🎀 Jangan pernah lupa…  
-kamu itu cukup, berharga, dan pantas bahagia 💕
+Selamat bertambah satu angka sayangg💕
 """)
 
     if st.button("💌 Lanjut ke kejutan berikutnya 💌"):
@@ -108,8 +102,8 @@ if st.session_state.step == 2:
     st.markdown("Klik tombol di bawah ya 👇")
 
     if st.button("✨ Klik aku ✨"):
-        st.snow()
-        st.success("💖 Kamu berhasil membuka kejutan rahasia 💖")
+        st.love()
+        st.success("💖 ke ciamis bareng mamat selamat hari kamis buat kamu yang paling manis 💖")
 
     if st.button("🧠 Lanjut ke Teka-Teki 🧠"):
         st.session_state.step = 3
@@ -143,9 +137,9 @@ sudah belajar, tumbuh, dan menjadi versi dirimu yang sekarang.
 Semoga bahagiamu selalu lebih besar dari sedihmu ✨
 """)
         else:
-            st.warning("🤏 Hampir benar… coba pikirkan lagi ya~")
+            st.warning("🤏 Hampir benar, coba pikirkan lagi ya sayang~")
 
 # =========================
 # FOOTER
 # =========================
-st.markdown("<br><p>Made with 💕 | Interactive Birthday App 🎀</p>", unsafe_allow_html=True)
+st.markdown("<br><p>Made with 💕 | Tepung Sasha Serbaguna Kaya Vitamin 🎀</p>", unsafe_allow_html=True)
