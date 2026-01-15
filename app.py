@@ -113,13 +113,6 @@ if st.session_state.step == 2:
         if st.button("🎂 Lanjut ke kejutan terakhir"):
             st.session_state.step = 3
 
-    if st.session_state.step == 3:
-    st.markdown("## 🎂 SELAMAT ULANG TAHUN 🎂")
-    st.markdown("""
-kamu sabar banget sayang, i pround with you! 💕
-""")
-    st.balloons()
-
     if st.button("✨ Klik aku ✨"):
         st.balloons()
         st.markdown("✨ 🎀 💕 🎂 💕 🎀 ✨")
