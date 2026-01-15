@@ -169,7 +169,7 @@ st.markdown("❓ Siapakah aku ❓")
             st.success("🎉 BENAR! 🎉")
             st.balloons()
             st.markdown("""
-💖 you shine like a star 💖  
+st.markdown("💗 you shine like a star 💗") 
 
 Terima kasih sudah bertahan sejauh ini,  
 sudah belajar, tumbuh, dan menjadi versi dirimu yang sekarang.  
