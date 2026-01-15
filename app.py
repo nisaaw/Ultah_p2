@@ -105,29 +105,41 @@ Selamat bertambah satu angka sayangg💕
 # =========================
 if st.session_state.step == 2:
     st.markdown("## 💗 Klik Sampai Terbuka 💗")
-    st.markdown("Klik tombol ini **7 kali** ya…")
+    st.markdown("Klik tombol ini **7 kali** untuk buka kejutan terakhir 🎁")
 
     if st.button("💗 Klik aku terus"):
         st.session_state.clicks += 1
 
     st.write(f"Klik: {st.session_state.clicks} / 7")
 
-    # 🎥 VIDEO MUNCUL SETIAP KLIK
-    if st.session_state.clicks >= 1:
-        video_path = "video/surprise.mp4"
-        if os.path.exists(video_path):
-            st.video(video_path)
-        else:
-            st.warning("🎥 Video belum ada")
+    # progress biar makin seru
+    st.progress(min(st.session_state.clicks / 7, 1.0))
 
-    # 🎉 KEJUTAN FINAL
     if st.session_state.clicks >= 7:
         st.balloons()
-        st.success("🎉 KEJUTAN TERBUKA 🎉")
-        st.write("Selamat ulang tahun! Kamu sabar banget 💕")
+        st.success("🎉 BERHASIL! 🎉")
+        st.write("Satu kejutan terakhir sudah siap 💕")
 
-        if st.button("🎂 Lanjut"):
+        if st.button("🎬 Buka Kejutan Terakhir"):
             st.session_state.step = 3
+
+        if st.session_state.step == 3:
+    st.markdown("## 🎉 Kejutan Terakhir 🎉")
+
+    st.markdown("""
+Terima kasih sudah sabar sampai di sini 💗  
+Video ini adalah penutup kecil  
+yang semoga bikin kamu senyum hari ini ✨
+""")
+
+    # 🔴 GANTI LINK YOUTUBE DI SINI
+    st.video("https://youtu.be/TDMf9sHhEYw")
+
+    st.markdown("""
+🎂 **Selamat Ulang Tahun** 🎂  
+    st.balloons()
+        if st.button("🎂 Lanjut"):
+            st.session_state.step = 4
 
     if st.button("✨ Klik aku ✨"):
         st.balloons()
@@ -135,12 +147,12 @@ if st.session_state.step == 2:
         st.success("💖 ke ciamis bareng mamat selamat hari kamis buat kamu yang paling manis 💖")
 
     if st.button("🧠 Lanjut ke Teka-Teki 🧠"):
-        st.session_state.step = 3
+        st.session_state.step = 5
 
 # =========================
 # STEP 4 – TEKA-TEKI
 # =========================
-if st.session_state.step == 3:
+if st.session_state.step == 5:
     st.markdown("## 🧠 Teka-Teki Ulang Tahun 🎂")
     st.markdown("""
 Aku selalu datang setahun sekali,  
