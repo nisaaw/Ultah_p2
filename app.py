@@ -1,6 +1,5 @@
 import streamlit as st
 import time
-import os
 
 # =========================
 # INIT SESSION STATE
@@ -21,7 +20,7 @@ st.set_page_config(
 )
 
 # =========================
-# CSS PINK
+# CSS TEMA PINK
 # =========================
 st.markdown("""
 <style>
@@ -41,29 +40,21 @@ p { color: #ff6699; font-size: 18px; text-align: center; }
 # =========================
 # JUDUL
 # =========================
-st.markdown("# 🎀✨ SELAMAT ULANG TAHUN SAYANG ✨🎀")
-st.markdown("## 💖 Spesial For You 💖")
+st.markdown("# 🎀✨ SELAMAT ULANG TAHUN ✨🎀")
+st.markdown("## 💖 Spesial Untuk Kamu 💖")
 
 # =========================
-# MUSIK
-# =========================
-music_path = "birthday.mp3"
-if os.path.exists(music_path):
-    with open(music_path, "rb") as audio:
-        st.audio(audio.read(), format="audio/mp3", loop=True)
-
-# =========================
-# STEP 0 – MULAI
+# STEP 0 — MULAI
 # =========================
 if st.session_state.step == 0:
     if st.button("🎁 Mulai Kejutan 🎁"):
         st.session_state.step = 1
 
 # =========================
-# STEP 1 – UCAPAN PANJANG
+# STEP 1 — UCAPAN PANJANG
 # =========================
 if st.session_state.step == 1:
-    with st.spinner("Menyiapkan kata-kata manis... 💗"):
+    with st.spinner("Menyiapkan sesuatu yang spesial... 💗"):
         time.sleep(2)
 
     st.balloons()
@@ -71,42 +62,49 @@ if st.session_state.step == 1:
     st.markdown("""
 🌸 **Selamat ulang tahun yaaa** 🌸  
 
-Happy birthday to a superstar ✨  
+Hari ini bukan cuma tentang bertambahnya usia,  
+tapi tentang semua proses yang sudah kamu lewati.  
 
-Today is your day, your happiest day ever.  
-May happiness bloom in your heart all year long.  
-Thank you for your hard work, your kindness, and your love.  
+Tentang kuat yang kadang kamu ragukan,  
+tentang lelah yang sering kamu simpan sendiri,  
+dan tentang senyum yang tetap kamu usahakan.  
 
-I'll always be by your side.  
-Be yourself, be happy, and keep shining 💕
-
-Selamat bertambah satu angka sayang 💗
+Aku harap di umur baru ini,  
+hatimu lebih tenang,  
+langkahmu lebih yakin,  
+dan kamu selalu ingat…  
+**kamu berharga** 💗
 """)
 
-    if st.button("💌 Lanjut ke kejutan berikutnya 💌"):
+    if st.button("💌 Lanjut"):
         st.session_state.step = 2
 
 # =========================
-# STEP 2 – CLICK TO UNLOCK
+# STEP 2 — KLIK + VIDEO KEJUTAN
 # =========================
 if st.session_state.step == 2:
     st.markdown("## 💗 Klik Sampai Terbuka 💗")
+    st.markdown("Setiap klik ada kejutan kecil 😆")
 
-    if st.button("💗 Klik aku terus"):
+    if st.button("💗 Klik aku"):
         st.session_state.clicks += 1
 
     st.write(f"Klik: {st.session_state.clicks} / 7")
     st.progress(min(st.session_state.clicks / 7, 1.0))
 
+    # 🎥 VIDEO KEJUTAN (MUNCUL SETIAP KLIK)
+    if st.session_state.clicks >= 1:
+        st.video("https://youtu.be/TDMf9sHhEYw")
+
     if st.session_state.clicks >= 7:
         st.balloons()
-        st.success("🎉 BERHASIL! 🎉")
+        st.success("🎉 KAMU BERHASIL 🎉")
 
         if st.button("🎬 Buka Kejutan Terakhir"):
             st.session_state.step = 3
 
 # =========================
-# STEP 3 – VIDEO TERAKHIR
+# STEP 3 — VIDEO PENUTUP
 # =========================
 if st.session_state.step == 3:
     st.markdown("## 🎉 Kejutan Terakhir 🎉")
@@ -114,47 +112,24 @@ if st.session_state.step == 3:
     st.markdown("""
 💗 you shine like a star 💗  
 
-Terima kasih sudah sabar sampai di sini.  
-Video ini adalah penutup kecil yang penuh cinta ✨
+Terima kasih sudah sabar sampai sejauh ini.  
+Video ini adalah penutup kecil  
+yang semoga bikin kamu senyum hari ini ✨
 """)
 
-    st.video("https://youtu.be/TDMf9sHhEYw")
+    # 🎬 VIDEO PENUTUP
+    st.video("https://youtu.be/2_F6Oi9QnLM")
 
-    st.markdown("🎂 Selamat Ulang Tahun 🎂")
-    st.balloons()
-
-    if st.button("🧠 Lanjut ke Teka-Teki"):
-        st.session_state.step = 4
-
-# =========================
-# STEP 4 – TEKA-TEKI
-# =========================
-if st.session_state.step == 4:
-    st.markdown("## 🧠 Teka-Teki Ulang Tahun 🎂")
     st.markdown("""
-Aku selalu datang setahun sekali,  
-aku tidak bisa dihindari,  
-tapi selalu ditunggu.  
+🎂 Selamat ulang tahun 🎂  
 
-❓ **Siapakah aku?**
+Semoga hari-harimu ke depan  
+selalu dipenuhi hal baik dan orang-orang yang tulus 💕
 """)
 
-    jawaban = st.text_input("Jawaban kamu:")
-
-    if jawaban:
-        if jawaban.lower() in ["ulang tahun", "birthday", "hari ulang tahun"]:
-            st.success("🎉 BENAR! 🎉")
-            st.balloons()
-            st.markdown("""
-💗 you shine like a star 💗  
-
-Terima kasih sudah bertahan sejauh ini.  
-Selamat ulang tahun 🎂✨
-""")
-        else:
-            st.warning("🤏 Hampir benar, coba lagi ya sayang~")
+    st.balloons()
 
 # =========================
 # FOOTER
 # =========================
-st.markdown("<br><p>Made with 💕 | Tepung Sasha Serbaguna Kaya Vitamin 🎀</p>", unsafe_allow_html=True)
+st.markdown("<br><p>Made with 💕 | Birthday Web Surprise 🎀</p>", unsafe_allow_html=True)
