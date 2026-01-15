@@ -112,12 +112,21 @@ if st.session_state.step == 2:
 
     st.write(f"Klik: {st.session_state.clicks} / 7")
 
+    # 🎥 VIDEO MUNCUL SETIAP KLIK
+    if st.session_state.clicks >= 1:
+        video_path = "video/surprise.mp4"
+        if os.path.exists(video_path):
+            st.video(video_path)
+        else:
+            st.warning("🎥 Video belum ada")
+
+    # 🎉 KEJUTAN FINAL
     if st.session_state.clicks >= 7:
         st.balloons()
         st.success("🎉 KEJUTAN TERBUKA 🎉")
         st.write("Selamat ulang tahun! Kamu sabar banget 💕")
 
-        if st.button("🎂 Lanjut ke kejutan terakhir"):
+        if st.button("🎂 Lanjut"):
             st.session_state.step = 3
 
     if st.button("✨ Klik aku ✨"):
