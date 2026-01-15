@@ -97,8 +97,18 @@ Selamat bertambah satu angka sayangg💕
 # STEP 3 – KEJUTAN EMOJI
 # =========================
 if st.session_state.step == 2:
-    st.markdown("## 🎉 KEJUTAN KECIL 🎉")
-    st.markdown("Klik tombol di bawah ya 👇")
+    if "clicks" not in st.session_state.step:
+    st.session_state.clicks = 0
+
+if st.button("💗 Klik aku terus"):
+    st.session_state.clicks += 1
+
+st.write(f"Klik: {st.session_state.clicks}")
+
+if st.session_state.clicks == 7:
+    st.balloons()
+    st.success("🎉 KEJUTAN TERBUKA 🎉")
+    st.write("Selamat ulang tahun! Kamu sabar banget 💕")
 
     if st.button("✨ Klik aku ✨"):
         st.balloons()
