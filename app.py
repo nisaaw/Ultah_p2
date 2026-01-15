@@ -96,8 +96,7 @@ Selamat bertambah satu angka sayangg💕
 # =========================
 # STEP 3 – KEJUTAN EMOJI
 # =========================
-if st.session_state.step == 2:
-    if "clicks" not in st.session_state.step:
+if "clicks" not in st.session_state.step:
     st.session_state.clicks = 0
 
 if st.button("💗 Klik aku terus"):
