@@ -135,7 +135,6 @@ yang semoga bikin kamu senyum hari ini ✨
     # 🔴 GANTI LINK YOUTUBE DI SINI
     st.video("https://youtu.be/TDMf9sHhEYw")
 
-    st.markdown("""
     st.markdown("🎂 Selamat Ulang Tahun 🎂")
     st.balloons()
         if st.button("🎂 Lanjut"):
