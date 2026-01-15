@@ -142,7 +142,7 @@ tapi rasa sayangnya besar 💗
 """)
 
     # 🔴 GANTI LINK VIDEO KEDUA DI SINI
-    st.video("https://www.youtube.com/watch?v=VIDEO_ID_KEDUA")
+    st.video("https://youtu.be/2_F6Oi9QnLM")
 
     st.balloons()
 
