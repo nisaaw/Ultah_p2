@@ -56,14 +56,14 @@ if os.path.exists(music_path):
 # STEP 0 – MULAI
 # =========================
 if st.session_state.step == 0:
-    if st.button("🎁 Mulai Kejutan 🎁"):
+    if st.button("🎁 Sudah Siap? 🎁"):
         st.session_state.step = 1
 
 # =========================
 # STEP 1 – UCAPAN PANJANG
 # =========================
 if st.session_state.step == 1:
-    with st.spinner("Menyiapkan kata-kata manis... 💗"):
+    with st.spinner("Sedang Memasak Mohon Bersabar... 💗"):
         time.sleep(2)
 
     st.balloons()
@@ -71,11 +71,13 @@ if st.session_state.step == 1:
     st.markdown("""
 🌸 **Selamat ulang tahun yaaa** 🌸  
 
-Happy birthday to a superstar ✨  
+Happy birthday to my favorite boy ✨  
 
-Today is your day, your happiest day ever.  
-May happiness bloom in your heart all year long.  
-Thank you for your hard work, your kindness, and your love.  
+Today is your day, your happiest day ever, today you're one year older
+may happiness bloom in your heart all year long, may ur every wish come true, 
+thank you for being a part of my life <3 thank you for always being my source of happiness, 
+thank you for your hard work, thank you for always share a positive words and smile to people around you. 
+I hope your special day will surrounded by happiness, blessed with love, brightened with fun.
 
 I'll always be by your side.  
 Be yourself, be happy, and keep shining 💕
@@ -83,7 +85,7 @@ Be yourself, be happy, and keep shining 💕
 Selamat bertambah satu angka sayang 💗
 """)
 
-    if st.button("💌 Lanjut ke kejutan berikutnya 💌"):
+    if st.button("💌 Lanjut ke Tahap ke 2 💌"):
         st.session_state.step = 2
 
 # =========================
@@ -102,43 +104,47 @@ if st.session_state.step == 2:
         st.balloons()
         st.success("🎉 BERHASIL! 🎉")
 
-        if st.button("🎬 Buka Kejutan Terakhir"):
+        if st.button("🎬 Buka Tahap ke 3"):
             st.session_state.step = 3
 
 # =========================
 # STEP 3 – VIDEO PERTAMA
 # =========================
 if st.session_state.step == 3:
-    st.markdown("## 🎉 Kejutan Pertama 🎉")
+    st.markdown("## 🎉 apa hayo? 🎉")
 
     st.markdown("""
 💗 you shine like a star 💗  
 
-Terima kasih sudah sabar sampai di sini.  
-Masih ada satu kejutan lagi buat kamu ✨
+good job! beneran di klik sampe 7 kali
+
+kamu penasaran kan? Eh... tapi tunggu dulu
+video nya?..tonton aja deh, udah nonton? HAHAH maaf yaa,
+soalnya lucuu liat kamu kepeleset terus✨
 """)
 
     st.video("https://youtu.be/TDMf9sHhEYw")
 
     st.balloons()
 
-    if st.button("💖 Lihat Kejutan Terakhir"):
+    if st.button("💖 Apa lagi ini ya ?"):
         st.session_state.step = 4
 
 # =========================
 # STEP 4 – VIDEO PENUTUP (GANTI TEKA-TEKI)
 # =========================
 if st.session_state.step == 4:
-    st.markdown("## 💖 Video Terakhir Buat Kamu 💖")
+    st.markdown("## 💖 video apa lagi?? 💖")
 
     st.markdown("""
-Aku nggak mau ini berakhir tanpa bilang satu hal penting…  
+Aku nggak mau ini berakhir tapi capeee ngodingnya..hehe bercanda :)
 
 Terima kasih sudah menjadi kamu,  
 dengan semua kelebihan dan kekuranganmu.  
 
-Video ini adalah penutup kecil,  
-tapi rasa sayangnya besar 💗
+Video ini adalah penutup kecil dari akuu,  
+ Ooh iya ada pesan dari sari sama siti, katanya Happy Milad Barakallahu Fii Umrik 💗
+ okeyy segitu dulu ajaa, babayy!💕
 """)
 
     # 🔴 GANTI LINK VIDEO KEDUA DI SINI
@@ -147,10 +153,8 @@ tapi rasa sayangnya besar 💗
     st.balloons()
 
     st.markdown("""
-🎂 **Selamat ulang tahun** 🎂  
+🎂 **Selamat ulang tahun yaa broow ** 🎂  
 
-Semoga kamu selalu bahagia,  
-dan semua doa baik pelan-pelan jadi nyata 💕
 """)
 
 # =========================
