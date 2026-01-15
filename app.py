@@ -1,7 +1,14 @@
 import streamlit as st
 import time
 import os
+import streamlit as st
 
+if "step" not in st.session_state:
+    st.session_state.step = 0
+
+if "clicks" not in st.session_state:
+    st.session_state.clicks = 0
+    
 # =========================
 # KONFIGURASI HALAMAN
 # =========================
